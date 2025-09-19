@@ -68,11 +68,11 @@ describe("TailwindPrefixUnplugin", () => {
     expect(result).toContain('clsx("tw-bg-red-500", cond && "tw-text-white")');
   });
 
-  // it("does not prefix non-tailwind tokens", async () => {
-  //   const code = customClass;
-  //
-  //   const result = await runTransform(code, { prefixOverride: "tw-" });
-  //
-  //   expect(result).toContain('className="custom-class"');
-  // });
+  it("does not prefix non-tailwind tokens", async () => {
+    const code = customClass;
+
+    const result = await runTransform(code, { prefixOverride: "tw-" });
+
+    expect(result).toContain('className="custom-class"');
+  });
 });

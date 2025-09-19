@@ -265,9 +265,6 @@ function isLikelyTailwindToken(token: string): boolean {
   // Heuristic: allow if it matches known roots or common shapes like x-y-...
   if (TW_ROOTS.has(core) || TW_ROOTS.has(core.split("-")[0])) return true;
 
-  // If it has a dash and looks utility-like (bg-red-500, text-sm, w-1/2, h-[10px], etc.)
-  if (/[a-z0-9_*\[\]!/.-]+-[a-z0-9_*\[\]()/.'":%-]+/i.test(core)) return true;
-
   // Also allow single-word utilities like "flex", "grid", "hidden"
   if (/^[a-z-]+$/.test(core) && TW_ROOTS.has(core)) return true;
 
