@@ -30,7 +30,7 @@ pnpm add unplugin-tailwind-prefixer --save-dev
 
 ```ts
 // vite.config.ts
-import TailwindPrefixer from "unplugin-tailwind-prefixer/vite";
+import TailwindPrefixer from "unplugin-tailwind-prefixer";
 
 export default {
   plugins: [
@@ -46,7 +46,7 @@ export default {
 
 ```ts
 // rollup.config.js
-import TailwindPrefixer from "unplugin-tailwind-prefixer/rollup";
+import TailwindPrefixer from "unplugin-tailwind-prefixer";
 
 export default {
   plugins: [TailwindPrefixer.rollup({ prefixOverride: "tw-" })],
@@ -57,7 +57,7 @@ export default {
 
 ```js
 // webpack.config.js
-const TailwindPrefixer = require("unplugin-tailwind-prefixer/webpack");
+const TailwindPrefixer = require("unplugin-tailwind-prefixer");
 
 module.exports = {
   plugins: [TailwindPrefixer.webpack({ prefixOverride: "tw-" })],
@@ -68,7 +68,7 @@ module.exports = {
 
 ```js
 // esbuild.config.js
-import { esbuildPlugin } from "unplugin-tailwind-prefixer/esbuild";
+import { esbuildPlugin } from "unplugin-tailwind-prefixer";
 
 esbuild.build({
   plugins: [esbuildPlugin({ prefixOverride: "tw-" })],
