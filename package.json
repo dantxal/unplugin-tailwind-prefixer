@@ -1,0 +1,43 @@
+{
+  "name": "vite-plugin-tailwind-prefixer",
+  "version": "0.1.0",
+  "description": "Prefix Tailwind classes in your source code at build time using Vite + Unplugin.",
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "test": "vitest run",
+    "lint": "eslint ."
+  },
+  "peerDependencies": {
+    "tailwindcss": ">=3",
+    "vite": ">=4"
+  },
+  "devDependencies": {
+    "@babel/generator": "^7",
+    "@babel/parser": "^7",
+    "@babel/traverse": "^7",
+    "@babel/types": "^7",
+    "@types/babel__generator": "^7",
+    "@types/babel__parser": "^7",
+    "@types/babel__traverse": "^7.28.0",
+    "@types/node": "^24.5.1",
+    "bundle-require": "^3",
+    "tsup": "^8",
+    "typescript": "^5",
+    "unplugin": "^1.7.0",
+    "vite": "^5",
+    "vitest": "^2"
+  }
+}
