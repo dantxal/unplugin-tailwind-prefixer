@@ -2,14 +2,14 @@
   "name": "unplugin-tailwind-prefixer",
   "version": "0.1.0",
   "description": "Prefix Tailwind classes in your source code at build time using any bundler compatible with Unplugin.",
+  "types": "dist/index.d.ts",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
-  "types": "dist/index.d.ts",
   "exports": {
     ".": {
+      "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
-      "import": "./dist/index.mjs",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.mjs"
     }
   },
   "files": [
@@ -30,7 +30,6 @@
     "@babel/traverse": "^7",
     "@babel/types": "^7",
     "@types/babel__generator": "^7",
-    "@types/babel__parser": "^7",
     "@types/babel__traverse": "^7.28.0",
     "@types/node": "^24.5.1",
     "bundle-require": "^3",
