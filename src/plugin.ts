@@ -3,8 +3,6 @@ import { parse } from "@babel/parser";
 import traverse, { NodePath } from "@babel/traverse";
 import generate from "@babel/generator";
 import * as t from "@babel/types";
-import fs from "fs";
-import path from "path";
 
 type Filter = (id: string) => boolean;
 
@@ -43,26 +41,6 @@ function makeFilter(opts: TailwindPrefixPluginOpts): Filter {
 
     return inc && !exc;
   };
-}
-
-async function findTailwindConfig(root: string, hint?: string) {
-  const candidates = hint
-    ? [hint]
-    : [
-        "tailwind.config.ts",
-        "tailwind.config.js",
-        "tailwind.config.cjs",
-        "tailwind.config.mjs",
-      ];
-
-  for (const rel of candidates) {
-    const p = path.resolve(root, rel);
-
-    if (fs.existsSync(p)) return p;
-  }
-
-  // Not found; return undefined (we’ll default to empty prefix)
-  return undefined;
 }
 
 /**
