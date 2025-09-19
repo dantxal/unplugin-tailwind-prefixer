@@ -1,6 +1,6 @@
 {
   "name": "unplugin-tailwind-prefixer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Prefix Tailwind classes in your source code at build time using any bundler compatible with Unplugin.",
   "types": "dist/index.d.ts",
   "main": "dist/index.cjs",
