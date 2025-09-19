@@ -1,7 +1,7 @@
 {
-  "name": "vite-plugin-tailwind-prefixer",
+  "name": "unplugin-tailwind-prefixer",
   "version": "0.1.0",
-  "description": "Prefix Tailwind classes in your source code at build time using Vite + Unplugin.",
+  "description": "Prefix Tailwind classes in your source code at build time using any bundler compatible with Unplugin.",
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -22,7 +22,7 @@
   },
   "peerDependencies": {
     "tailwindcss": ">=3",
-    "vite": ">=4"
+    "unplugin": "^1.0.0"
   },
   "devDependencies": {
     "@babel/generator": "^7",
@@ -39,5 +39,21 @@
     "unplugin": "^1.7.0",
     "vite": "^5",
     "vitest": "^2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dantxal/unplugin-tailwind-prefixer.git"
+  },
+  "keywords": [
+    "unplugin",
+    "vite",
+    "webpack",
+    "rollup",
+    "esbuild",
+    "tailwindcss",
+    "prefix",
+    "plugin"
+  ],
+  "author": "Daniel Faria <github.com/dantxal>",
+  "license": "MIT"
 }
